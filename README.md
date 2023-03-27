@@ -14,7 +14,7 @@ I was working in the structure html and creating the readme.
 
 ## Languages
 
-![Icon](../assets/images/html.png)
+![Icon](assets/images/html.png)
 
 ## Author
 
@@ -22,4 +22,4 @@ Yhanahi Rosenthal
 
 # MEGA ROCKET GYM
 
-![Logo](..assets/images/logo.png)
+![Logo](assets/images/logo.png)
