@@ -2,7 +2,7 @@
 
 ## Mega Rocket GYM
 
-The project is about a gym website that has many functionalities. It  has many user types as partners, clients, trainers and one super admin.
+The project is about a landing page that has many functionalities. It have a gestion system to help the different users to see classes, the coachs y the many activities que this provide, have funtionalities to admins too. It has many user types as partners, clients, trainers and one super admin.
 
 ## Week 01
 
