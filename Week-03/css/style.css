@@ -299,3 +299,115 @@ body {
     border-radius: 10px;
     font-weight: bold;
 }
+
+
+/* ----------- activities ----------- */
+
+#Activities .container-cards-activities {
+    height: 600px;
+}
+
+#Activities .cards-activities {
+    display: inline-block;
+    height: 190px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: black 0px 0.5px 4px;
+    margin: 40px 0 0 70px;
+}
+
+#Activities .cards-activities h5 {
+    background-color: #0000003f;
+    text-align: center;
+    margin: 60px auto 0 auto;
+    font-size: 35px;
+    color: #ffffff;
+    border-radius: 100px;
+    width: 180px;
+}
+
+#Activities .container-cards-activities .crossfit {
+    margin: 0 0 0 380px;
+    background-image: url("../../assets/images/crossfit.png");
+    background-repeat: no-repeat;
+}
+
+#Activities .container-cards-activities .box {
+    background-image: url("../../assets/images/box.png");
+    background-repeat: no-repeat;
+}
+
+#Activities .container-cards-activities .functional {
+    position: absolute;
+    margin: 280px 0 0 -490px;
+    background-image: url("../../assets/images/functional.png");
+    background-repeat: no-repeat;
+}
+
+#Activities .container-cards-activities .spinning {
+    position: absolute;
+    margin: 280px 0 0 -870px;
+    background-image: url("../../assets/images/spinning.png");
+    background-repeat: no-repeat;
+}
+
+#Activities .container-cards-activities .fitness {
+    position: absolute;
+    margin: 280px 0 0 -120px;
+    background-image: url("../../assets/images/fitness.png");
+    background-repeat: no-repeat;
+}
+
+/* ------------ section memberships -------------- */
+
+
+#Memberships ul {
+    margin: 40px auto 0 auto;
+    width: 480px;
+}
+
+#Memberships ul li {
+    list-style: none;
+    margin: 80px 0 80px 0;
+}
+
+#Memberships ul li h5, .sentence {
+    position: absolute;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+#Memberships ul li h5 {
+    font-size: 35px;
+    color: #D5DD3C;
+    margin: 70px 0 0 110px;
+    width: 250px;
+    text-align: center;
+}
+
+#Memberships ul li .sentence {
+    font-size: 25px;
+    color: #ffffff;
+    width: 310px;
+    text-align: center;
+}
+
+#Memberships ul li .first-phrase-membership {
+    margin: 200px 0 0 90px;
+}
+
+#Memberships ul li .second-phrase-membership {
+    margin: 260px 0 0 90px;
+}
+
+#Memberships ul li .third-phrase-membership {
+    margin: 340px 0 0 90px;
+}
+
+#Memberships ul li .membership-schedule-view {
+    margin: 450px 0 0 90px;
+}
+
+#Memberships ul li img {
+    filter: brightness(30%);
+}
