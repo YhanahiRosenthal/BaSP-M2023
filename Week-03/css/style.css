@@ -145,3 +145,157 @@ body {
     margin: 30px auto 0 auto;
     color: white;
 }
+
+/* ---------- titles-pages --------- */
+
+.container-title-section-page {
+    padding: 120px;
+    text-align: center;
+}
+
+.title-section-page {
+    margin: 0 0 0 -200px;
+    color: white;
+    font-size: 90px;
+    text-shadow: 3px 3px black ;
+    letter-spacing: 3px;
+}
+
+.title-section-page .second-part-title {
+    position: absolute;
+    margin: 100px 0 0 -70px;
+    color: #E3EC39;
+    font-size: 90px;
+}
+
+.our-story {
+    font-size: 50px;
+}
+
+#our-story {
+    font-size: 50px;
+}
+
+/* ----------- features ------------- */
+
+.container-cards {
+    margin: auto;
+}
+
+.container-cards .cards-features {
+    width: 452px;
+    height: 288px;
+    margin: 0 0 0 300px;
+}
+
+.container-cards .cards-features h5 {
+    margin: 20px 0 0 0;
+    padding: 50px 0 0 0;
+    font-size: 40px;
+    color:#D5DD3C;
+    text-align: center;
+}
+
+.container-cards .cards-features p {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    font-size: 20px;
+    color:white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container-cards .reservation {
+    background-image: url("../../assets/images/reservations.png");
+    box-shadow: black 1px 5px 10px;
+    border-radius: 8px;
+}
+
+.container-cards .memberships {
+    background-image: url("../../assets/images/memberships.png");
+    box-shadow: black 1px 5px 10px;
+    border-radius: 8px;
+}
+
+.container-cards .schedule {
+    background-image: url("../../assets/images/schedule.png");
+    box-shadow: black 1px 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    margin: -600px 0 0 820px;
+}
+
+.container-cards .contact {
+    background-image: url("../../assets/images/contactSuggestions.png");
+    box-shadow: black 1px 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    margin: -290px 0 0 820px;
+}
+
+/* -------- contact us -------- */
+
+.container-form {
+    width: 80%;
+    height: 451px;
+    margin: auto;
+    background-color:white;
+    border: solid #00000000;
+    border-radius: 30px;
+}
+
+.container-form .container-inputs {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0 0 0;
+    border: none;
+}
+
+.container-form div {
+    display: inline-block;
+    margin: -10px 0 0 0;
+    padding-left: 50px;
+    border: none;
+}
+
+.container-form div input {
+    background-color: #c5c5c5;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px ;
+}
+
+.container-form div select {
+    background-color: #c5c5c5;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px ;
+}
+
+.container-form .input-message {
+    margin: 30px 0 0 15px;
+    width: 90%;
+    height: 120px;
+}
+
+.container-form .input-message p {
+    margin-bottom: 10px;
+}
+
+.container-form .input-message textarea {
+    background-color: #c5c5c5;
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 20px;
+}
+
+.container-form .button-send-form {
+    background-color: #D5DD3C;
+    margin: 60px 0 0 570px;
+    width: 90px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
