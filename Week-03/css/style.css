@@ -411,3 +411,58 @@ body {
 #Memberships ul li img {
     filter: brightness(30%);
 }
+
+/* ------ section our story -------- */
+
+#OurStory {
+    margin:200px 0 200px 390px;
+}
+
+.our-story {
+    margin: 0 0 -90px -160px;
+}
+
+#OurStory .container-text-our-story {
+    background-color: #b0b0b0;
+    border-radius: 20px;
+    width: 650px;
+    margin: 0 -40px 0 100px;
+    padding: 20px 50px 10px 50px;
+    text-align: center;
+}
+
+#OurStory .container-text-our-story .our-story-sentence {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color:  #404040;
+}
+
+/* ------- footer ------- */
+
+.container-footer {
+    background-color: #323232;
+}
+
+.container-footer .container-social {
+    display: inline-block;
+    margin: 0 0 -90px 0;
+}
+
+.container-footer .container-social .social-links {
+    display: inline-block;
+    margin: 40px 20px 0 40px;
+    padding: 0 30px 0 50px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.container-footer .container-social .social-links img {
+    margin: 0 20px -30px 0;
+}
+
+.container-footer .footer-reserved {
+    display: inline-block;
+    margin: 0 0 50px 1500px;
+    text-align: center;
+    color: #ffffff;
+}
