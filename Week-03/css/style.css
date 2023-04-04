@@ -8,8 +8,6 @@ body {
     background-color: #4e4e4e;
 }
 
-/* ----------  Header -------------- */
-
 .header-container {
     background-color: #323232;
     height: 188px;
@@ -58,8 +56,6 @@ body {
     height: 30px;
 }
 
-/* ----------  Navbar -------------- */
-
 .container-navbar {
     position: absolute;
     background-color: #D5DD3C;
@@ -102,13 +98,9 @@ body {
     font-weight: bold;
 }
 
-/* ----------- Main ---------- */
-
 .container-main {
     margin-left: 336px;
 }
-
-/* -------- section Home --------- */
 
 .index-home {
     background-image: url('../../assets/images/index.png');
@@ -138,15 +130,13 @@ body {
 }
 
 .index-home .text-home {
-    width: 800px;
+    width: 820px;
     text-align: center;
     font-size: 25px;
     line-height: 50px;
     margin: 30px auto 0 auto;
     color: white;
 }
-
-/* ---------- titles-pages --------- */
 
 .container-title-section-page {
     padding: 120px;
@@ -175,9 +165,7 @@ body {
 #our-story {
     font-size: 50px;
 }
-
-/* ----------- features ------------- */
-
+    
 .container-cards {
     margin: auto;
 }
@@ -233,8 +221,6 @@ body {
     margin: -290px 0 0 820px;
 }
 
-/* -------- contact us -------- */
-
 .container-form {
     width: 80%;
     height: 451px;
@@ -260,6 +246,7 @@ body {
 
 .container-form div input {
     background-color: #c5c5c5;
+    padding-left: 10px;
     width: 200px;
     height: 40px;
     border-radius: 6px ;
@@ -284,6 +271,7 @@ body {
 
 .container-form .input-message textarea {
     background-color: #c5c5c5;
+    padding: 10px;
     width: 100%;
     height: 120px;
     border: none;
@@ -299,9 +287,6 @@ body {
     border-radius: 10px;
     font-weight: bold;
 }
-
-
-/* ----------- activities ----------- */
 
 #Activities .container-cards-activities {
     height: 600px;
@@ -358,12 +343,9 @@ body {
     background-repeat: no-repeat;
 }
 
-/* ------------ section memberships -------------- */
-
-
 #Memberships ul {
-    margin: 40px auto 0 auto;
     width: 480px;
+    margin: 40px auto 0 auto;
 }
 
 #Memberships ul li {
@@ -412,8 +394,6 @@ body {
     filter: brightness(30%);
 }
 
-/* ------ section our story -------- */
-
 #OurStory {
     margin:200px 0 200px 390px;
 }
@@ -437,13 +417,13 @@ body {
     color:  #404040;
 }
 
-/* ------- footer ------- */
-
 .container-footer {
     background-color: #323232;
 }
 
 .container-footer .container-social {
+    position:relative;
+    top: 30px;
     display: inline-block;
     margin: 0 0 -90px 0;
 }
