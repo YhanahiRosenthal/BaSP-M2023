@@ -31,8 +31,10 @@ body {
 }
 
 .container-button {
-    display: inline-block;
-    margin: 0 0 0 1200px;
+    position: relative;
+    top: 60px;
+    right: 30px;
+    float: right;
 }
 
 .container-button .name-button{
@@ -240,7 +242,7 @@ body {
 .container-form div {
     display: inline-block;
     margin: -10px 0 0 0;
-    padding-left: 50px;
+    padding-left: 60px;
     border: none;
 }
 
@@ -276,11 +278,12 @@ body {
     height: 120px;
     border: none;
     border-radius: 20px;
+    resize: none;
 }
 
 .container-form .button-send-form {
     background-color: #D5DD3C;
-    margin: 60px 0 0 570px;
+    margin: 40px 0 0 570px;
     width: 90px;
     height: 40px;
     border: none;
