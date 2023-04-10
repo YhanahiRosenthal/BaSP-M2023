@@ -24,10 +24,6 @@
         color: #ffffff;
     }
     
-    .container-footer .container-social .social-links img {
-        margin: 0 20px 0 0;
-    }
-    
     .container-footer .footer-reserved {
         display: block;
         align-self: center;
@@ -35,5 +31,41 @@
         color: #ffffff;
         margin:  0 2rem;
     }
+
+    .container-info-footer {
+        display: none;
+    }
     
+}
+
+@media screen and (max-width:1024px) {
+
+    .container-info-footer {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+    }
+
+    .container-info-footer div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #525252;
+    }
+
+    .container-info-footer div p {
+        margin: 1.2rem 0 1.2rem 0;
+        list-style: none;
+    }
+
+    .container-info-footer div img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .container-info-footer p {
+        display: inline-block;
+        font-weight: bold;
+    }
 }
