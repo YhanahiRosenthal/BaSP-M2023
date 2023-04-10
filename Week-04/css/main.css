@@ -1,338 +1,911 @@
-@media screen and (min-width: 390px) {
-    
-    .container-main .container-navbar {
+.container-navbar {
+    display: none;
+}
+
+/* ------- home ------ */
+
+.index-home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('../../assets/images/background-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
+
+.container-title-home {
+    padding: 2rem 1rem 6rem 0;
+    text-align: center;
+}
+
+.title-home {
+    margin: 2rem 0 0 -3rem;
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 3px 3px black ;
+    letter-spacing: 3px;
+}
+
+.title-home .getfit-home {
+    position: absolute;
+    margin: 3rem 0 0 -7rem;
+    color: #E3EC39;
+    font-size: 2.8rem;
+}
+
+.index-home .container-text-home {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 6rem auto 0 auto;
+    color: white;
+}
+
+/* -------- features -------- */
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.container-cards .cards-features {
+    width: 90%;
+    height: 12rem;
+}
+
+.container-cards .cards-features h5 {
+    margin: 3rem 0 0 0;
+    font-size: 1.7rem;
+    color:#D5DD3C;
+    text-align: center;
+}
+
+.container-cards .cards-features p {
+    font-size: 0.9rem;
+    color:white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container-cards .reservation {
+    background-image: url("../../assets/images/reservations.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: black 1px 5px 10px;
+    border-radius: 1.6rem;
+}
+
+.container-cards .memberships {
+    background-image: url("../../assets/images/memberships.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: black 1px 5px 10px;
+    border-radius: 1.6rem;
+}
+
+.container-cards .schedule {
+    background-image: url("../../assets/images/schedule.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: black 1px 5px 10px;
+    border-radius: 1.6rem;
+}
+
+.container-cards .contact {
+    background-image: url("../../assets/images/contactSuggestions.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: black 1px 5px 10px;
+    border-radius: 1.6rem;
+}
+
+/* ------- contact us ------- */
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    background-color:white;
+    border: solid #00000000;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.container-form .container-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    border: none;
+}
+
+.container-form div {
+    border: none;
+}
+
+.container-form div input {
+    background-color: #c5c5c5;
+    width: 95%;
+    height: 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.container-form div select {
+    background-color: #c5c5c5;
+    width: 97%;
+    height: 1.8rem;
+    border-radius: 6px ;
+    margin: 1rem 0;
+}
+
+.container-form .input-message {
+    padding-bottom: 2rem;
+}
+
+.container-form .input-message p {
+    margin-bottom: 10px;
+}
+
+.container-form .input-message textarea {
+    background-color: #c5c5c5;
+    padding: 10px;
+    width: 90%;
+    height: 7rem;
+    border: none;
+    border-radius: 20px;
+    resize: none;
+}
+
+.container-form .button-send-form {
+    background-color: #D5DD3C;
+    width: 90px;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 0 auto 2rem auto;
+}
+
+/* -------- activities --------- */
+
+#Activities .container-cards-activities {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#Activities .container-crossfit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    gap: 1rem;
+}
+
+#Activities .container-functional-spinning-fitness {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#Activities .cards-activities {
+    display: flex;
+    justify-content: center;
+    height: 12rem;
+    background-size: cover;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: black 0px 0.5px 4px;
+    margin: auto;
+}
+
+#Activities .cards-activities h5 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #0000003f;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    border-radius: 100px;
+    width: 180px;
+}
+
+#Activities .container-cards-activities .crossfit {
+    background-image: url("../../assets/images/crossfit.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Activities .container-cards-activities .box {
+    background-image: url("../../assets/images/box.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Activities .container-cards-activities .functional {
+    background-image: url("../../assets/images/functional.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Activities .container-cards-activities .spinning {
+    background-image: url("../../assets/images/spinning.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Activities .container-cards-activities .fitness {
+    background-image: url("../../assets/images/fitness.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* --------- memberships ---------- */
+
+#Memberships {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Memberships ul{
+    padding: 0;
+}
+
+#Memberships ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    height: 20rem;
+    width: 80%;
+    margin: 1rem auto 3rem auto;
+    border-radius: 2rem;
+}
+
+#Memberships ul li h5, .sentence {
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+#Memberships ul li h5 {
+    font-size: 1.3rem;
+    color: #D5DD3C;
+    text-align: center;
+}
+
+#Memberships ul li .sentence {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+#Memberships ul .only-classes-membership {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/OnlyClassesMembership.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Memberships ul .classic-membership {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/ClassicMembership.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Memberships ul .black-membership {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/BlackMembership.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* --------- our story -------- */
+
+#OurStory .container-text-our-story {
+    background-color: #b0b0b0;
+    border-radius: 20px;
+    width: 80%;
+    height: 8rem;
+    padding: 1rem;
+    margin: 0 auto 4rem auto;
+    text-align: center;
+}
+
+#OurStory .container-text-our-story .our-story-sentence {
+    font-size: 0.8rem;
+    color:  #404040;
+}
+
+/* ------- footer -------- */
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #C4C4C4;
+}
+
+.container-footer .container-social {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.container-footer .container-social .social-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+}
+
+.container-footer .container-social .social-links img {
+    width: 2.5rem;
+}
+
+.container-footer .footer-reserved {
+    text-align: center;
+    color: #666666;
+}
+
+
+@media screen and (min-width: 1025px) {
+
+    .header-container {
+        background-color: #323232;
+        width: 100%;
+        height: 188px;
+    }
+
+    .header-container .icon-burger {
         display: none;
     }
 
-    /* ------- home ------ */
+    .logo {
+        display: inline-block;
+        margin: 20px;
+    }
+
+    .logo .img-logo {
+        margin: 20px 20px -10px 90px;
+        width: 80px;
+    }
+
+    .logo .title-logo {
+        color: rgb(245, 245, 58);
+        font-size: 30px;
+        text-shadow: black 2px 2px 2px;
+    }
+
+    .container-button {
+        position: relative;
+        top: 60px;
+        right: 30px;
+        float: right;
+    }
+
+    .container-button .name-button{
+        display: inline-block;
+        width: 160px;
+        height: 30px;
+        margin: 0 20px 0 10px;
+        padding: 20px 0 20px 0;
+        border-color: #00000000;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #ffffff;
+        font-size: 25px;
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .container-button .img-button {
+        padding-left: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-navbar {
+        display: flex;
+        flex-direction: column;
+        background-color: #D5DD3C;
+        width: 20%;
+        padding-top: 4rem;
+        text-align: center;
+    }
+
+    .container-navbar .container-navbar-sticky {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+        position: sticky;
+        top: 0;
+    }
+
+    .menu-list li {
+        list-style: none;
+        margin: 40px;
+    }
+
+    .menu-list li a {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .container-info ul li {
+        margin: 25px 0 25px 0;
+        list-style: none;
+    }
+
+    .container-info img {
+        display: inline-block;
+        width: 38px;
+    }
+
+    .container-info p {
+        display: inline-block;
+        width: 190px;
+        font-weight: bold;
+    }
+
+    .container-main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-all-sections {
+        width: 80%; 
+    }
 
     .index-home {
-        background-image: url('../../assets/images/background-mobile.png');
+        background-image: url('../../assets/images/index.png');
         background-repeat: no-repeat;
         background-size: cover;
-        height: 40rem;
+        height: 864px;
     }
-    
+
+    .container-title-home {
+        text-align: center;
+    }
+
+    .title-home {
+        color: white;
+        font-size: 90px;
+        text-shadow: 3px 3px black ;
+        letter-spacing: 3px;
+    }
+
+    .title-home .getfit-home {
+        color: #E3EC39;
+        font-size: 90px;
+    }
+
+    .index-home .text-home {
+        width: 820px;
+        text-align: center;
+        font-size: 25px;
+        line-height: 50px;
+        margin: 30px auto 0 auto;
+        color: white;
+    }
+
+    .container-title-section-page {
+        padding: 120px;
+        text-align: center;
+    }
+
+    .title-section-page {
+        color: white;
+        font-size: 90px;
+        text-shadow: 3px 3px black ;
+        letter-spacing: 3px;
+    }
+
+    .title-section-page .second-part-title {
+        color: #E3EC39;
+        font-size: 90px;
+    }
+
+    .our-story {
+        font-size: 50px;
+    }
+
+    #our-story {
+        font-size: 50px;
+    }
+        
+    .container-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    .container-cards .cards-features {
+        width: 26rem;
+        height: 16rem;
+        border-radius: 1.6rem;
+    }
+
+    .container-cards .cards-features h5 {
+        font-size: 2.3rem;
+        text-align: center;
+    }
+
+    .container-cards .cards-features p {
+        width: 80%;
+        margin: 30px auto 0 auto;
+        font-size: 1.3rem;
+        color:white;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .container-form {
+        text-align: start;
+    }
+
+    .container-form .container-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .container-form div {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-form div input {
+        display: flex;
+        justify-content: flex-start;
+        background-color: #c5c5c5;
+        height: 2.1rem;
+        border-radius: 6px ;
+        width: 10rem;
+        text-align: start;
+    }
+
+    .container-form div select {
+        display: flex;
+        background-color: #c5c5c5;
+        width: 11rem;
+        height: 2.4rem;
+        border-radius: 6px;
+    }
+
+    .container-form .input-message {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: start;
+        margin: 0 auto;
+        width: 92%;
+        display: flex;
+        padding-bottom: 1rem;
+    }
+
+    .container-form .input-message p {
+        margin-bottom: 10px;
+    }
+
+    .container-form .input-message textarea {
+        background-color: #c5c5c5;
+        padding: 10px;
+        width: 100%;
+        height: 120px;
+        border: none;
+        border-radius: 20px;
+        resize: none;
+        margin: 0 auto;
+    }
+
+    .container-form .button-send-form {
+        margin-top: 1rem;
+        background-color: #D5DD3C;
+        width: 5.5rem;
+        border: none;
+        border-radius: 0.4rem;
+        font-weight: bold;
+    }
+
+    #Activities .container-cards-activities {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 3rem;
+        height: 600px;
+        width: 90%;
+    }
+
+    #Activities .container-crossfit-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        width: 70%;
+    }
+
+    #Activities .container-functional-spinning-fitness {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #Activities .cards-activities {
+        height: 12rem;
+        width: 20rem;
+        border-radius: 15px;
+        box-shadow: black 0px 0.5px 4px;
+    }
+
+    #Activities .cards-activities h5 {
+        background-color: #0000003f;
+        text-align: center;
+        margin: 60px auto 0 auto;
+        font-size: 2.4rem;
+        color: #ffffff;
+        border-radius: 100px;
+        width: auto;
+        height: 3rem;
+    }
+
+    #Activities .container-cards-activities .crossfit {
+        background-image: url("../../assets/images/crossfit.png");
+        background-repeat: no-repeat;
+    }
+
+    #Activities .container-cards-activities .box {
+        background-image: url("../../assets/images/box.png");
+        background-repeat: no-repeat;
+    }
+
+    #Activities .container-cards-activities .functional {
+        background-image: url("../../assets/images/functional.png");
+        background-repeat: no-repeat;
+    }
+
+    #Activities .container-cards-activities .spinning {
+        background-image: url("../../assets/images/spinning.png");
+        background-repeat: no-repeat;
+    }
+
+    #Activities .container-cards-activities .fitness {
+        background-image: url("../../assets/images/fitness.png");
+        background-repeat: no-repeat;
+    }
+
+    #Memberships ul {
+        width: 480px;
+        margin: 40px auto 0 auto;
+    }
+
+    #Memberships ul li {
+        list-style: none;
+        height: 35.4rem;
+        width: 24rem;
+        border-radius: 1rem;
+    }
+
+    #Memberships ul li h5, .sentence {
+        z-index: 1;
+        text-transform: uppercase;
+    }
+
+    #Memberships ul li h5 {
+        font-size: 2rem;
+        color: #D5DD3C;
+        width: 15rem;
+        margin: auto;
+        text-align: center;
+    }
+
+    #Memberships ul li .sentence {
+        font-size: 25px;
+        color: #ffffff;
+        width: 310px;
+        text-align: center;
+    }
+
+    #OurStory {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: auto;
+        width: 70%;
+    }
+
+    #OurStory .container-text-our-story {
+        background-color: #b0b0b0;
+        border-radius: 20px;
+        width: 650px;
+        height: auto;
+        text-align: center;
+    }
+
+    #OurStory .container-text-our-story .our-story-sentence {
+        margin-bottom: 20px;
+        font-size: 25px;
+        color:  #404040;
+    }
+
+    .container-footer {
+        background-color: #323232;
+    }
+
+    .container-footer .container-social .social-links {
+        font-size: 25px;
+        color: #ffffff;
+    }
+
+    .container-footer .footer-reserved {
+        text-align: center;
+        color: #ffffff;
+    }
+
+}
+
+@media screen and (max-width: 1275px) {
+    #Activities .cards-activities h5 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1765px) {
+
+    .container-form .container-inputs {
+        gap: 3.5rem;
+    }
+
+    .container-form div input {
+        height: 2.3rem;
+        width: 13rem;
+    }
+
+    .container-form div select {
+        height: 2.5rem;
+        width: 13rem;
+    }
+
+    .container-form {
+        height: 26rem;
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
     .container-title-home {
         padding: 2rem 1rem 6rem 0;
         text-align: center;
     }
     
     .title-home {
-        margin: 2rem 0 0 -3rem;
-        color: white;
-        font-size: 2.8rem;
-        text-shadow: 3px 3px black ;
-        letter-spacing: 3px;
+        margin: 9rem 0 -5rem -7rem;
+        font-size: 3.8rem;
     }
     
     .title-home .getfit-home {
         position: absolute;
-        margin: 3rem 0 0 -7rem;
-        color: #E3EC39;
-        font-size: 2.8rem;
+        margin: 3rem 0 0 -5rem;
+        font-size: 3.8rem;
     }
-    
-    .index-home .container-text-home {
-        display: flex;
-        gap: 1rem;
-        flex-direction: column;
-        width: 80%;
-        text-align: center;
-        font-size: 0.9rem;
-        line-height: 1.2rem;
-        margin: 6rem auto 0 auto;
-        color: white;
+
+    /* -------- aside -------- */
+
+    .container-main .container-navbar {
+        display: none;
     }
 
     /* -------- features -------- */
 
-    .container-cards {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-    }
-
     .container-cards .cards-features {
-        width: 17rem;
-        height: 12rem;
+        height: 16rem;
     }
     
     .container-cards .cards-features h5 {
-        margin: 3rem 0 0 0;
-        font-size: 1.7rem;
-        color:#D5DD3C;
-        text-align: center;
+        font-size: 2.9rem;
     }
     
     .container-cards .cards-features p {
-        font-size: 0.9rem;
-        color:white;
-        text-align: center;
-        font-weight: 600;
-    }
-    
-    .container-cards .reservation {
-        background-image: url("../../assets/images/reservations.png");
-        box-shadow: black 1px 5px 10px;
-        border-radius: 1.6rem;
-    }
-    
-    .container-cards .memberships {
-        background-image: url("../../assets/images/memberships.png");
-        box-shadow: black 1px 5px 10px;
-        border-radius: 1.6rem;
-    }
-    
-    .container-cards .schedule {
-        background-image: url("../../assets/images/schedule.png");
-        box-shadow: black 1px 5px 10px;
-        border-radius: 1.6rem;
-    }
-    
-    .container-cards .contact {
-        background-image: url("../../assets/images/contactSuggestions.png");
-        box-shadow: black 1px 5px 10px;
-        border-radius: 1.6rem;
+        margin: 1rem auto;
+        font-size: 1.3rem;
+        width: 16rem;
     }
 
     /* ------- contact us ------- */
 
     .container-form {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 90%;
-        margin: auto;
-        background-color:white;
-        border: solid #00000000;
-        border-radius: 30px;
-        text-align: center;
-        margin-top: -2.5rem;
+        text-align: start;
     }
     
     .container-form .container-inputs {
-        border: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
     }
     
-    .container-form div {
-        border: none;
+    .container-form .container-inputs div {
+        display: flex;
+        flex-direction: column;
     }
-    
+
     .container-form div input {
-        background-color: #c5c5c5;
-        width: 95%;
-        height: 1.5rem;
-        border-radius: 6px;
-        text-align: center;
+        width: 10rem;
+        text-align: start;
     }
 
     .container-form div select {
-        background-color: #c5c5c5;
-        width: 97%;
-        height: 1.8rem;
-        border-radius: 6px ;
+        width: 10rem;
     }
-    
+
     .container-form .input-message {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding-bottom: 2rem;
     }
     
     .container-form .input-message p {
         margin-bottom: 10px;
+        margin-left: 5%;
     }
     
     .container-form .input-message textarea {
-        background-color: #c5c5c5;
-        padding: 10px;
-        width: 90%;
-        height: 7rem;
-        border: none;
-        border-radius: 20px;
-        resize: none;
-    }
-    
-    .container-form .button-send-form {
-        background-color: #D5DD3C;
-        width: 90px;
-        height: 40px;
-        border: none;
-        border-radius: 10px;
-        font-weight: bold;
-        margin: 0 auto 2rem auto;
+        display: flex;
+        align-self: center;
     }
 
     /* -------- activities --------- */
-
-    #Activities .container-cards-activities {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 2rem;
-    }
     
     #Activities .cards-activities {
-        height: 190px;
-        width: 300px;
-        border-radius: 15px;
-        box-shadow: black 0px 0.5px 4px;
-        margin: auto;
+        height: 16rem;
     }
     
     #Activities .cards-activities h5 {
-        background-color: #0000003f;
+        /* margin: 60px auto 0 auto; */
         text-align: center;
-        margin: 60px auto 0 auto;
-        font-size: 35px;
-        color: #ffffff;
-        border-radius: 100px;
-        width: 180px;
-    }
-    
-    #Activities .container-cards-activities .crossfit {
-        background-image: url("../../assets/images/crossfit.png");
-        background-repeat: no-repeat;
-    }
-    
-    #Activities .container-cards-activities .box {
-        background-image: url("../../assets/images/box.png");
-        background-repeat: no-repeat;
-    }
-    
-    #Activities .container-cards-activities .functional {
-        position: absolute;
-        margin: 280px 0 0 -490px;
-        background-image: url("../../assets/images/functional.png");
-        background-repeat: no-repeat;
-    }
-    
-    #Activities .container-cards-activities .spinning {
-        background-image: url("../../assets/images/spinning.png");
-        background-repeat: no-repeat;
-    }
-    
-    #Activities .container-cards-activities .fitness {
-        background-image: url("../../assets/images/fitness.png");
-        background-repeat: no-repeat;
+        font-size: 3.5rem;
+        width: 14rem;
     }
 
-    
-    /* --------- memberships ---------- */
+    /* ------ footer ------- */
 
-    #Memberships {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    #Memberships ul{
-        padding: 0;
-    }
-
-    #Memberships ul li {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        list-style: none;
-        height: 20rem;
-        width: 80%;
-        margin: 1rem auto 3rem auto;
-        border-radius: 2rem;
-    }
-    
-    #Memberships ul li h5, .sentence {
-        z-index: 1;
-        text-transform: uppercase;
-    }
-    
-    #Memberships ul li h5 {
-        font-size: 1.3rem;
-        color: #D5DD3C;
-        text-align: center;
-    }
-    
-    #Memberships ul li .sentence {
-        font-size: 0.9rem;
-        color: #ffffff;
-        text-align: center;
-        width: 90%;
-        margin: auto;
-    }
-    
-    #Memberships ul .only-classes-membership {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/OnlyClassesMembership.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    #Memberships ul .classic-membership {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/ClassicMembership.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    
-    #Memberships ul .black-membership {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/BlackMembership.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    /* --------- our story -------- */
-
-    #OurStory .container-text-our-story {
-        background-color: #b0b0b0;
-        border-radius: 20px;
-        width: 80%;
-        height: 8rem;
-        padding: 1rem;
-        margin: 0 auto 4rem auto;
-        text-align: center;
-    }
-    
-    #OurStory .container-text-our-story .our-story-sentence {
-        font-size: 0.8rem;
-        color:  #404040;
-    }
-
-    /* ------- footer -------- */
-
-    .container-footer {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        background-color: #C4C4C4;
-    }
-    
     .container-footer .container-social {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 2rem;
-        margin: 2rem 0 2rem 0;
+        justify-content: space-evenly;
+        flex-direction: row;
     }
-    
-    .container-footer .container-social .social-links {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        font-size: 25px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 500;
-        text-decoration: none;
-        color: #000000;
-    }
-    
-    .container-footer .container-social .social-links img {
-        width: 2.5rem;
-    }
-    
-    .container-footer .footer-reserved {
-        text-align: center;
-        color: #666666;
-    }
-    
 }
+

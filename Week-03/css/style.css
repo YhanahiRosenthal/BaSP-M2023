@@ -296,7 +296,7 @@ body {
 }
 
 #Activities .cards-activities {
-    display: inline-block;
+    display: block;
     height: 190px;
     width: 300px;
     border-radius: 15px;
