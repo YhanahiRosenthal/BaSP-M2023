@@ -370,7 +370,6 @@
     color: #666666;
 }
 
-
 @media screen and (min-width: 1025px) {
 
     .container-title-home {
@@ -450,6 +449,7 @@
         gap: 3.5rem;
         position: sticky;
         top: 0;
+        margin: 0 auto;
     }
 
     .menu-list li {
@@ -520,31 +520,6 @@
         margin: 30px auto 0 auto;
         color: white;
     }
-
-    .container-title-section-page {
-        padding: 120px;
-        text-align: center;
-    }
-
-    .title-section-page {
-        color: white;
-        font-size: 90px;
-        text-shadow: 3px 3px black ;
-        letter-spacing: 3px;
-    }
-
-    .title-section-page .second-part-title {
-        color: #E3EC39;
-        font-size: 90px;
-    }
-
-    .our-story {
-        font-size: 50px;
-    }
-
-    #our-story {
-        font-size: 50px;
-    }
         
     .container-cards {
         display: flex;
@@ -562,16 +537,12 @@
 
     .container-cards .cards-features h5 {
         font-size: 2.3rem;
-        text-align: center;
     }
 
     .container-cards .cards-features p {
         width: 80%;
         margin: 30px auto 0 auto;
         font-size: 1.3rem;
-        color:white;
-        text-align: center;
-        font-weight: 600;
     }
 
     .container-form {
@@ -588,9 +559,9 @@
     }
 
     .container-form div {
-        font-size: 1.2rem;
         display: flex;
         flex-direction: column;
+        font-size: 1.2rem;
     }
 
     .container-form div input {
@@ -598,17 +569,14 @@
         justify-content: flex-start;
         background-color: #c5c5c5;
         height: 2.1rem;
-        border-radius: 6px ;
         width: 10rem;
         text-align: start;
     }
 
     .container-form div select {
         display: flex;
-        background-color: #c5c5c5;
         width: 11rem;
         height: 2.4rem;
-        border-radius: 6px;
     }
 
     .container-form .input-message {
@@ -622,44 +590,29 @@
         padding-bottom: 1rem;
     }
 
-    .container-form .input-message p {
-        margin-bottom: 10px;
-    }
-
     .container-form .input-message textarea {
-        background-color: #c5c5c5;
-        padding: 10px;
         width: 100%;
         height: 120px;
-        border: none;
-        border-radius: 20px;
-        resize: none;
         margin: 0 auto;
     }
 
     .container-form .button-send-form {
         margin-top: 1rem;
-        background-color: #D5DD3C;
         width: 5.5rem;
-        border: none;
         border-radius: 0.4rem;
-        font-weight: bold;
     }
 
     #Activities .container-cards-activities {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
         gap: 3rem;
         height: 600px;
         width: 90%;
+        margin: auto;
     }
 
     #Activities .container-crossfit-box {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: auto;
         width: 70%;
     }
 
@@ -670,46 +623,14 @@
     }
 
     #Activities .cards-activities {
-        height: 12rem;
         width: 20rem;
-        border-radius: 15px;
-        box-shadow: black 0px 0.5px 4px;
     }
 
     #Activities .cards-activities h5 {
-        background-color: #0000003f;
-        text-align: center;
         margin: 60px auto 0 auto;
         font-size: 2.4rem;
-        color: #ffffff;
-        border-radius: 100px;
         width: auto;
         height: 3rem;
-    }
-
-    #Activities .container-cards-activities .crossfit {
-        background-image: url("../../assets/images/crossfit.png");
-        background-repeat: no-repeat;
-    }
-
-    #Activities .container-cards-activities .box {
-        background-image: url("../../assets/images/box.png");
-        background-repeat: no-repeat;
-    }
-
-    #Activities .container-cards-activities .functional {
-        background-image: url("../../assets/images/functional.png");
-        background-repeat: no-repeat;
-    }
-
-    #Activities .container-cards-activities .spinning {
-        background-image: url("../../assets/images/spinning.png");
-        background-repeat: no-repeat;
-    }
-
-    #Activities .container-cards-activities .fitness {
-        background-image: url("../../assets/images/fitness.png");
-        background-repeat: no-repeat;
     }
 
     #Memberships ul {
@@ -718,7 +639,6 @@
     }
 
     #Memberships ul li {
-        list-style: none;
         height: 35.4rem;
         width: 24rem;
         border-radius: 1rem;
@@ -726,22 +646,17 @@
 
     #Memberships ul li h5, .sentence {
         z-index: 1;
-        text-transform: uppercase;
     }
 
     #Memberships ul li h5 {
         font-size: 2rem;
-        color: #D5DD3C;
         width: 15rem;
         margin: auto;
-        text-align: center;
     }
 
     #Memberships ul li .sentence {
         font-size: 25px;
-        color: #ffffff;
         width: 310px;
-        text-align: center;
     }
 
     #OurStory {
@@ -753,17 +668,13 @@
     }
 
     #OurStory .container-text-our-story {
-        background-color: #b0b0b0;
-        border-radius: 20px;
         width: 650px;
         height: auto;
-        text-align: center;
     }
 
     #OurStory .container-text-our-story .our-story-sentence {
         margin-bottom: 20px;
         font-size: 25px;
-        color:  #404040;
     }
 
     .container-footer {
@@ -776,7 +687,6 @@
     }
 
     .container-footer .footer-reserved {
-        text-align: center;
         color: #ffffff;
     }
 
@@ -817,11 +727,6 @@
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
 
-    .container-title-home {
-        padding: 2rem 1rem 6rem 0;
-        text-align: center;
-    }
-    
     .title-home {
         margin: 9rem 0 -5rem -7rem;
         font-size: 3.8rem;
@@ -887,11 +792,9 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        padding-bottom: 2rem;
     }
     
     .container-form .input-message p {
-        margin-bottom: 10px;
         margin-left: 5%;
     }
     
@@ -907,8 +810,6 @@
     }
     
     #Activities .cards-activities h5 {
-        /* margin: 60px auto 0 auto; */
-        text-align: center;
         font-size: 3.5rem;
         width: 14rem;
     }

@@ -26,6 +26,8 @@ flexbox to sort element into boxes and finally the landing page is deploy on "Gi
 
 Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-04/index.html
 
+### Screen resolution: 1920px (Desktop)
+
 ## Languages
 
 <img src="assets/images/html.png" width="200" alt="icon html" >
