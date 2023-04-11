@@ -2,8 +2,6 @@
     display: none;
 }
 
-/* ------- home ------ */
-
 .index-home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ,url('../../assets/images/background-mobile.png');
     background-repeat: no-repeat;
@@ -42,8 +40,6 @@
     margin: 6rem auto 0 auto;
     color: white;
 }
-
-/* -------- features -------- */
 
 .container-cards {
     display: flex;
@@ -103,8 +99,6 @@
     box-shadow: black 1px 5px 10px;
     border-radius: 1.6rem;
 }
-
-/* ------- contact us ------- */
 
 .container-form {
     display: flex;
@@ -174,8 +168,6 @@
     font-weight: bold;
     margin: 0 auto 2rem auto;
 }
-
-/* -------- activities --------- */
 
 #Activities .container-cards-activities {
     display: flex;
@@ -254,8 +246,6 @@
 }
 
 
-/* --------- memberships ---------- */
-
 #Memberships {
     display: flex;
     justify-content: center;
@@ -314,8 +304,6 @@
     background-repeat: no-repeat;
 }
 
-/* --------- our story -------- */
-
 #OurStory .container-text-our-story {
     background-color: #b0b0b0;
     border-radius: 20px;
@@ -330,8 +318,6 @@
     font-size: 0.8rem;
     color:  #404040;
 }
-
-/* ------- footer -------- */
 
 .container-footer {
     display: flex;
@@ -738,13 +724,9 @@
         font-size: 3.8rem;
     }
 
-    /* -------- aside -------- */
-
     .container-main .container-navbar {
         display: none;
     }
-
-    /* -------- features -------- */
 
     .container-cards .cards-features {
         height: 16rem;
@@ -759,8 +741,6 @@
         font-size: 1.3rem;
         width: 16rem;
     }
-
-    /* ------- contact us ------- */
 
     .container-form {
         text-align: start;
@@ -803,8 +783,6 @@
         align-self: center;
     }
 
-    /* -------- activities --------- */
-    
     #Activities .cards-activities {
         height: 16rem;
     }
@@ -813,8 +791,6 @@
         font-size: 3.5rem;
         width: 14rem;
     }
-
-    /* ------ footer ------- */
 
     .container-footer .container-social {
         display: flex;
