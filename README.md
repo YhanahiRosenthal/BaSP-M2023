@@ -16,8 +16,15 @@ I was working in the structure html and creating the readme.
 
 ## Week 03
 
-i was working with css, adding styles at html structure and making
+I was working with css, adding styles at html structure and making
 the landing page, sorting only with display inline, block and inline-block.
+
+## Week 04
+
+I was working with media querys to make responsive the landing page, implementing 
+flexbox to sort element into boxes and finally the landing page is deploy on "Github pages".
+
+Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-04/index.html
 
 ## Languages
 
