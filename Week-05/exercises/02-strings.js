@@ -46,13 +46,8 @@ console.log(whiteSpace.indexOf(" "));
 
 var twoWordsLongs = "contrarrevolucionario anticonstitucionalidad";
 
-var space = twoWordsLongs.indexOf(" ");
-var FirstCapitalLetter = twoWordsLongs.substring(0, 1).toUpperCase();
-var SecondCapitalLetter = twoWordsLongs.substring(22, 23).toUpperCase();
+console.log(twoWordsLongs[0].toUpperCase() + twoWordsLongs.substring(1, 22) + 
+            " " + 
+            twoWordsLongs[22].toUpperCase() + twoWordsLongs.substring(23)
+            );
 
-var RestOfFirstWord = twoWordsLongs.substring(1, 21);
-var RestOfSecondWord  = twoWordsLongs.substring(23, 44);
-
-
-
-console.log("Exercise 2.d: " + FirstCapitalLetter + RestOfFirstWord + " " + SecondCapitalLetter + RestOfSecondWord);
