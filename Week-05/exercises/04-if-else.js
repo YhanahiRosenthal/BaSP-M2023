@@ -39,6 +39,6 @@ if(Age < 2){
     alert("Adulto mayor");
 }else{
     alert("Anciano");
-}
+};
 
 
