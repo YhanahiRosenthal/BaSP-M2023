@@ -54,6 +54,13 @@
     height: 12rem;
 }
 
+.container-cards div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: black 1px 5px 10px;
+    border-radius: 1.6rem;
+}
+
 .container-cards .cards-features h5 {
     margin: 3rem 0 0 0;
     font-size: 1.7rem;
@@ -70,52 +77,39 @@
 
 .container-cards .reservation {
     background-image: url("../../assets/images/reservations.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: black 1px 5px 10px;
-    border-radius: 1.6rem;
 }
 
 .container-cards .memberships {
     background-image: url("../../assets/images/memberships.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: black 1px 5px 10px;
-    border-radius: 1.6rem;
 }
 
 .container-cards .schedule {
     background-image: url("../../assets/images/schedule.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: black 1px 5px 10px;
-    border-radius: 1.6rem;
 }
 
 .container-cards .contact {
     background-image: url("../../assets/images/contactSuggestions.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: black 1px 5px 10px;
-    border-radius: 1.6rem;
 }
 
 .container-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 90%;
+    align-items: center;
+    width: 85%;
     margin: auto;
     background-color:white;
     border: solid #00000000;
     border-radius: 30px;
     text-align: center;
+    padding: 1.1rem 1rem 0 1rem;
 }
 
 .container-form .container-inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     border: none;
 }
@@ -143,6 +137,7 @@
 
 .container-form .input-message {
     padding-bottom: 2rem;
+    width: 90%;
 }
 
 .container-form .input-message p {
@@ -197,6 +192,7 @@
     justify-content: center;
     height: 12rem;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 90%;
     border-radius: 15px;
     box-shadow: black 0px 0.5px 4px;
@@ -217,32 +213,22 @@
 
 #Activities .container-cards-activities .crossfit {
     background-image: url("../../assets/images/crossfit.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #Activities .container-cards-activities .box {
     background-image: url("../../assets/images/box.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #Activities .container-cards-activities .functional {
     background-image: url("../../assets/images/functional.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #Activities .container-cards-activities .spinning {
     background-image: url("../../assets/images/spinning.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #Activities .container-cards-activities .fitness {
     background-image: url("../../assets/images/fitness.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
@@ -265,6 +251,8 @@
     width: 80%;
     margin: 1rem auto 3rem auto;
     border-radius: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #Memberships ul li h5, .sentence {
@@ -288,20 +276,14 @@
 
 #Memberships ul .only-classes-membership {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/OnlyClassesMembership.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #Memberships ul .classic-membership {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/ClassicMembership.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #Memberships ul .black-membership {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/images/BlackMembership.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #OurStory .container-text-our-story {
@@ -354,6 +336,94 @@
 .container-footer .footer-reserved {
     text-align: center;
     color: #666666;
+}
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .title-home {
+        margin: 9rem 0 -5rem -7rem;
+        font-size: 3.8rem;
+    }
+    
+    .title-home .getfit-home {
+        position: absolute;
+        margin: 3rem 0 0 -5rem;
+        font-size: 3.8rem;
+    }
+
+    .container-main .container-navbar {
+        display: none;
+    }
+
+    .container-cards .cards-features {
+        height: 16rem;
+        max-width: 70%;
+    }
+    
+    .container-cards .cards-features h5 {
+        font-size: 2.9rem;
+    }
+    
+    .container-cards .cards-features p {
+        margin: 1rem auto;
+        font-size: 1.3rem;
+        width: 16rem;
+    }
+
+    .container-form {
+        text-align: start;
+    }
+    
+    .container-form .container-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+    
+    .container-form .container-inputs div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-form div input {
+        width: 10rem;
+        text-align: start;
+    }
+
+    .container-form div select {
+        width: 10rem;
+    }
+
+    .container-form .input-message {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .container-form .input-message p {
+        margin-left: 5%;
+    }
+    
+    .container-form .input-message textarea {
+        display: flex;
+        align-self: center;
+    }
+
+    #Activities .cards-activities {
+        height: 18rem;
+        max-width: 70%;
+    }
+    
+    #Activities .cards-activities h5 {
+        font-size: 3.5rem;
+        width: 14rem;
+    }
+
+    #Memberships ul li {
+        height: 29.4rem;
+        width: 22rem;
+    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -697,105 +767,17 @@
 
     .container-form div input {
         height: 2.3rem;
-        width: 13rem;
+        width: 11.5rem;
     }
 
     .container-form div select {
         height: 2.5rem;
-        width: 13rem;
+        width: 11.5rem;
     }
 
     .container-form {
         height: 26rem;
         text-align: start;
-    }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-
-    .title-home {
-        margin: 9rem 0 -5rem -7rem;
-        font-size: 3.8rem;
-    }
-    
-    .title-home .getfit-home {
-        position: absolute;
-        margin: 3rem 0 0 -5rem;
-        font-size: 3.8rem;
-    }
-
-    .container-main .container-navbar {
-        display: none;
-    }
-
-    .container-cards .cards-features {
-        height: 16rem;
-    }
-    
-    .container-cards .cards-features h5 {
-        font-size: 2.9rem;
-    }
-    
-    .container-cards .cards-features p {
-        margin: 1rem auto;
-        font-size: 1.3rem;
-        width: 16rem;
-    }
-
-    .container-form {
-        text-align: start;
-    }
-    
-    .container-form .container-inputs {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 3rem;
-    }
-    
-    .container-form .container-inputs div {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container-form div input {
-        width: 10rem;
-        text-align: start;
-    }
-
-    .container-form div select {
-        width: 10rem;
-    }
-
-    .container-form .input-message {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    .container-form .input-message p {
-        margin-left: 5%;
-    }
-    
-    .container-form .input-message textarea {
-        display: flex;
-        align-self: center;
-    }
-
-    #Activities .cards-activities {
-        height: 16rem;
-    }
-    
-    #Activities .cards-activities h5 {
-        font-size: 3.5rem;
-        width: 14rem;
-    }
-
-    .container-footer .container-social {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
     }
 }
 
