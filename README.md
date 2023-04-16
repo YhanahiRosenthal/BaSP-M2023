@@ -26,12 +26,20 @@ flexbox to sort element into boxes and finally the landing page is deploy on "Gi
 
 Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-04/index.html
 
+## Week 05
+
+I'm been working with Javascript, doing exercises of the week challenge where i had to solve them using "variables and operators", "strings", "arrays", "if-else", "for" and functions, also i corrected details and code of the week 04 on css and html.
+
+Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-05/index.html
+
 ### Screen resolution: 1920px (Desktop)
 
 ## Languages
 
-<img src="assets/images/html.png" width="200" alt="icon html" >
-<img src="assets/images/css.png" width="200" alt="icon css" >
+
+<img src="assets/images/html.png" style="display: inline" width="120" alt="icon html" >
+<img src="assets/images/css.png" style="display: inline" width="120" alt="icon css" >
+<img src="assets/images/js.png" style="display: inline" width="120" alt="icon Javascript" >
 
 ## Author
 
