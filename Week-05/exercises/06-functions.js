@@ -16,7 +16,7 @@ console.log("Exercise 6.a: " + suma(4, 9));
 
 function sumaUno(a, b){
     if(isNaN(a) || isNaN(b)){
-        alert('Uno de los valores no es un numero');
+        // alert('Uno de los valores no es un numero');
         return NaN;
     };
     
@@ -29,11 +29,8 @@ console.log("Exercise 6.b: " + sumaUno(45, 'D'));
 //     parámetro y devuelva verdadero si es un número entero.
 
 function validateInteger(x){
-    if(x % 1 == 0){
-        console.log('True');
-    }else{
-        console.log('False');
-    };
+
+    return Number.isInteger(x);
 };
 
 console.log("Exercise 6.c: " + validateInteger(23.2));
@@ -45,37 +42,41 @@ console.log("Exercise 6.c: " + validateInteger(23.2));
 
 
 function sumaDos(a, b){
-    if(a - Math.round(a) != 0 && b - Math.round(b) != 0){
-        alert("ERROR: Los valores " + a + " y " + b + " son decimales y tienen que ser enteros. Ejemplo: "
-                + 
-                Math.round(a) + " + " + Math.round(b)
-            );    
-        }else if(a - Math.round(a) != 0){
+    if(!isNaN(a) && !isNaN(b)){
+        if(!validateInteger(a) || !validateInteger(b)){
+            alert("ERROR: Uno o ambos valores (" + a + " y " + b + ") son decimales y tienen que ser enteros.");
+            if(!validateInteger(a)){
                 alert("ERROR: El primer valor es " + a + " y tiene que ser: " + Math.round(a));
-            }else{
-                alert("ERROR: El segundo valor es " + b + " y tiene que ser: " + Math.round(b));
-            };
+                if(!validateInteger(b)){
+                    alert("ERROR: El segundo valor es " + b + " y tiene que ser: " + Math.round(b));
+            }}};
+    }else{
+        alert('Uno de los valores no es un numero');
+        return NaN;
+    };
 
         return Math.round(a + b);
     };
 
 
-console.log("Exercise 6.d: " + sumaDos(12, 8.5));
+console.log("Exercise 6.d: " + sumaDos(6, 1.7));
 
 // e - Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de una nueva función
 //     probando que todo siga funcionando igual que en el apartado anterior.
 
 function validateCount(a, b){
-    if(a - Math.round(a) != 0 && b - Math.round(b) != 0){
-        alert("ERROR: Los valores " + a + " y " + b + " son decimales y tienen que ser enteros. Ejemplo: "
-               + 
-               Math.round(a) + " + " + Math.round(b)
-            );
-    }else if(a - Math.round(a) != 0){
-            alert("ERROR: El primer valor es " + a + " y tiene que ser: " + Math.round(a));
-        }else{
-            alert("ERROR: El segundo valor es " + b + " y tiene que ser: " + Math.round(b));
-        };
+    if(!isNaN(a) && !isNaN(b)){
+        if(!validateInteger(a) || !validateInteger(b)){
+            alert("ERROR: Uno o ambos valores (" + a + " y " + b + ") son decimales y tienen que ser enteros.");
+            if(!validateInteger(a)){
+                alert("ERROR: El primer valor es " + a + " y tiene que ser: " + Math.round(a));
+                if(!validateInteger(b)){
+                    alert("ERROR: El segundo valor es " + b + " y tiene que ser: " + Math.round(b));
+            }}};
+    }else{
+        alert('Uno de los valores no es un numero');
+        return NaN;
+    };
 };
 
 function sumaTres(a, b){
