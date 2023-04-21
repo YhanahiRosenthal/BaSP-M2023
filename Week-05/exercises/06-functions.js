@@ -19,7 +19,7 @@ function sumaUno(a, b){
         // alert('Uno de los valores no es un numero');
         return NaN;
     };
-    
+
     return a + b;
 };
 
