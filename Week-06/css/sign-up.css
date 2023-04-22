@@ -118,16 +118,12 @@
     gap: 0.3rem;
 }
 
-.container-label-input select, input {
+.container-label-input input {
     width: 13rem;
     height: 1.5rem;
     background-color: #fbfbfb;
     border-color: #00000000;
     border-radius: 0.3rem;
-}
-
-.container-label-input select {
-    height: 1.8rem;
 }
 
 .register-button {
@@ -162,17 +158,19 @@
 }
 
 .container-message-error {
-    height: 1.2rem;
+    height: 1.3rem;
+    width: 14rem;
     padding: 0;
     margin: 0;
 }
 
-.container-message-error p {
+.container-message-error .message-error {
     position: relative;
     bottom: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     color: red;
+    height: 1.5rem;
 }
 
 .you-do-have-user {
