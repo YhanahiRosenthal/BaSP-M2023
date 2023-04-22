@@ -153,6 +153,22 @@
     color: #ffffff;
 }
 
+.container-error-messagge {
+    height: 1.3rem;
+    width: 14rem;
+    padding: 0;
+    margin: 0;
+}
+
+.container-error-messagge .error-message {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: red;
+    height: 1.5rem;
+}
+
 .you-dont-have-user{
     font-size: 0.8rem;
     color: black;

@@ -99,7 +99,13 @@ function validateForm(){
                 errorName.removeChild(p)
             }
         }
+
+        nameInput.onfocus = function(){
+            if(p){
+              errorName.removeChild(p)
+            }
     }
+}
 
     surname.onblur = function(){
         if (!surname.value.match(/^[A-Za-z\s]/) || surname.value.length < 3) {
@@ -114,7 +120,13 @@ function validateForm(){
                 errorSurname.removeChild(s)
             }
         }
+
+        surname.onfocus = function(){
+            if(s){
+              errorSurname.removeChild(s)
+            }
     }
+}
 
     email.onblur = function(){
         if (!email.value.match(/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/)) {
@@ -128,7 +140,13 @@ function validateForm(){
                 errorEmail.removeChild(t)
             }
         }
+
+        email.onfocus = function(){
+            if(t){
+              errorEmail.removeChild(t)
+            }
     }
+}
 
     password.onblur = function(){
         if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]/ || password.value.length > 7)) {
@@ -142,7 +160,13 @@ function validateForm(){
                 errorPassword.removeChild(g)
             }
         }
+
+        password.onfocus = function(){
+            if(g){
+              errorPassword.removeChild(g)
+            }
     }
+}
 
     confirmPassword.onblur = function(){
         if(password.value !== confirmPassword.value){
@@ -156,7 +180,13 @@ function validateForm(){
                     errorConfirmPassword.removeChild(n)
                 }
         }
+
+        confirmPassword.onfocus = function(){
+            if(n){
+              errorConfirmPassword.removeChild(n)
+            }
     }
+}
 
     dni.onblur = function(){
         if (isNaN(dni.value) || dni.value.length < 7) {
@@ -170,7 +200,13 @@ function validateForm(){
                 errorDni.removeChild(d)
             }
         }
+
+        dni.onfocus = function(){
+            if(d){
+              errorDni.removeChild(d)
+            }
     }
+}
 
     date.onblur = function(){
         if(date.value == ''){
@@ -184,7 +220,13 @@ function validateForm(){
                     errorDate.removeChild(m)
                 }
         }
+
+        date.onfocus = function(){
+            if(m){
+              errorDate.removeChild(m)
+            }
     }
+}
 
     phone.onblur = function(){
         if (isNaN(phone.value) || phone.value.length < 10 || phone.value.length > 10){
@@ -197,8 +239,14 @@ function validateForm(){
                 if(q){
                     errorPhone.removeChild(q)
                 }
+        }
+
+        phone.onfocus = function(){
+            if(q){
+              errorPhone.removeChild(q)
             }
     }
+}
 
     address.onblur = function(){
         if (!address.value.match(/^[\w\s]{5,}$/)){
@@ -211,8 +259,14 @@ function validateForm(){
                 if(k){
                     errorAddress.removeChild(k)
                 }
+        }
+
+        address.onfocus = function(){
+            if(k){
+              errorAddress.removeChild(k)
             }
     }
+}
 
     locations.onblur = function(){
         if (!locations.value.match(/^[A-Za-z0-9]/) || locations.value.length <= 2){
@@ -225,8 +279,14 @@ function validateForm(){
                 if(z){
                     errorLocation.removeChild(z)
                 }
+        }
+
+        locations.onfocus = function(){
+            if(z){
+              errorLocation.removeChild(z)
             }
     }
+}
 
     postalCode.onblur = function(){
         if (!postalCode.value.match(/^\d{4,5}$/)){
@@ -239,10 +299,15 @@ function validateForm(){
                 if(b){
                     errorPostal.removeChild(b)
                 }
+        }
+
+        postalCode.onfocus = function(){
+            if(b){
+              errorPostal.removeChild(b)
             }
     }
 
-}
+}}
 
 validateForm()
 
@@ -250,7 +315,29 @@ var buttonSendForm = document.getElementById('button-send-form')
 
 buttonSendForm.addEventListener('click', function(e){
     e.preventDefault()
-    if(isValidName, isValidSurname, isValidEmail, isValidPassword, isValidConfirm,
+    if(!isValidName){
+        alert("The field 'Name' has an error or is not complete")
+    }else if(!isValidSurname){
+        alert("The field 'Surame' has an error or is not complete")
+    }else if(!isValidEmail){
+        alert("The field 'Email' has an error or is not complete")
+    }else if(!isValidPassword){
+        alert("The field 'Password' has an error or is not complete")
+    }else if(!isValidConfirm){
+        alert("Passwords do not match or are not complete")
+    }else if(!isValidDNI){
+        alert("The field 'DNI' has an error or is not complete")
+    }else if(!isValidDate){
+        alert("The field 'Date' is not complete")
+    }else if(!isValidPhone){
+        alert("The field 'Phone' has an error or is not complete")
+    }else if(!isValidAddress){
+        alert("The field 'Address' has an error or is not complete")
+    }else if(!isValidLocation){
+        alert("The field 'Location' has an error or is not complete")
+    }else if(!isValidPostal){
+        alert("The field 'Postal code' has an error or is not complete")
+    }else if(isValidName, isValidSurname, isValidEmail, isValidPassword, isValidConfirm,
         isValidDNI, isValidDate, isValidPhone, isValidAddress, isValidLocation, isValidPostal){
             alert('Successfully sent')
             alert("YOUR DATA: " + "Name: " + nameInput.value + ", " +
