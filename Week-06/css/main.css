@@ -211,6 +211,22 @@
     resize: none;
 }
 
+.container-message-error {
+    height: 1.3rem;
+    width: 14rem;
+    padding: 0;
+    margin: 0;
+}
+
+.container-message-error .message-error {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: red;
+    height: 1.6rem;
+}
+
 .container-form .button-send-form {
     background-color: #D5DD3C;
     width: 90px;
@@ -219,6 +235,12 @@
     border-radius: 10px;
     font-weight: bold;
     margin: 0 auto 2rem auto;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.container-form .button-send-form:hover {
+    background-color: #E3EC39;
 }
 
 #Activities .container-cards-activities {
@@ -765,22 +787,29 @@
 @media screen and (min-width: 1765px) {
 
     .container-form .container-inputs {
-        gap: 3.5rem;
+        gap: 2.5rem;
     }
 
     .container-form div input {
         height: 2.3rem;
-        width: 11.5rem;
+        width: 13.5rem;
     }
 
     .container-form div select {
         height: 2.5rem;
-        width: 11.5rem;
+        width: 13.5rem;
     }
 
     .container-form {
-        height: 26rem;
+        height: auto;
         text-align: start;
+    }
+
+    .container-form .button-send-form {
+        margin-top: 1rem;
+        width: 5.5rem;
+        padding: 0.6rem;
+        border-radius: 0.4rem;
     }
 }
 

@@ -111,30 +111,35 @@
                     <div class="container-inputs">
                         <div>
                             <label for="name">Name</label>
-                            <input type="text" placeholder="Name" name="name">
+                            <input type="text" placeholder="Name" name="name" id="name">
+                            <div class="container-message-error" id="error-name"></div>
                         </div>
                         <div>
                             <label for="surname">Surname</label>
-                            <input type="text" placeholder="Surname" name="surname">
+                            <input type="text" placeholder="Surname" name="surname" id="surname">
+                            <div class="container-message-error" id="error-surname"></div>
                         </div>
                         <div>
                             <label for="email">E-Mail</label>
-                            <input type="email" placeholder="E-Mail" name="email">
+                            <input type="email" placeholder="E-Mail" name="email" id="emails">
+                            <div class="container-message-error" id="error-email"></div>
                         </div>
                         <div>
                             <label for="reason">Contact reason</label>
-                            <select name="reason">
-                                <option value="information">Information</option>
-                                <option value="Questions">Questions</option>
-                                <option value="business">Business</option>
+                            <select name="reason" id="reason">
+                                <option value="Memberships and costs">I want to know the memberships and costs</option>
+                                <option value="Questions or suggestion">I want to make a question or suggestion</option>
+                                <option value="Claim">I want to make a claim</option>
                             </select>
+                            <div class="container-message-error"></div>
                         </div>
                     </div>
                     <div class="input-message">
                         <p>Message</p>
-                        <textarea placeholder="Write here..."></textarea>
+                        <textarea placeholder="Write here..." id="message"></textarea>
+                        <div class="container-message-error" id="error-message"></div>
                     </div>
-                    <button class="button-send-form" >Send</button>
+                    <button class="button-send-form" id="button-send-message-contact">Send</button>
                 </form>
             </section>
             <section id="Activities">
@@ -242,6 +247,6 @@
             <p>All rights reserved. 2023©</p>
         </div>
     </footer>
-    <script src="../js/login.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 </html>
