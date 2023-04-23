@@ -249,7 +249,7 @@ function validateForm(){
 }
 
     address.onblur = function(){
-        if (!address.value.match(/^[\w\s]{5,}$/)){
+        if (!address.value.match(/^[a-zA-ZÁÉÍÓÚáéíóú\s]+\s\d{4,}$/)){
                 address.style.border = 'solid red 1px'
                 errorAddress.appendChild(k)
                 isValidAddress = false
