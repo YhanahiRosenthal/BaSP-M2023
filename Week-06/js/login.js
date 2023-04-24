@@ -51,10 +51,36 @@ email.onblur = function(){
 }
 
 password.onblur = function(){
-    if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]/ || password.value.length > 7)) {
-                password.style.border = 'solid red 1px'
-                errorPassword.appendChild(g)
-                isValidPassword = false
+  password.onblur = function(){
+
+    var passwordValue = password.value
+
+    function validatePassword(passwordValue){
+
+        var letters = false
+        var numbers = false
+
+        if (passwordValue.length < 8) {
+            return false
+        }
+        for (var i = 0; i < passwordValue.length; i++){
+
+            var character = passwordValue.charAt(i)
+
+            if (character >= '0' && character <= '9'){
+                numbers = true
+
+            } else if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z')) {
+                letters = true
+            }
+        }
+        return letters && numbers
+    }
+
+    if (!validatePassword(passwordValue)) {
+        password.style.border = 'solid red 1px'
+        errorPassword.appendChild(g)
+        isValidPassword = false
     }else{
         password.style.border = 'none'
         isValidPassword = true
@@ -63,12 +89,12 @@ password.onblur = function(){
         }
     }
 
-    email.onfocus = function(){
-      if(g){
-        errorEmail.removeChild(g)
-      }
+    password.onfocus = function(){
+        if(g){
+          errorPassword.removeChild(g)
+        }
     }
-}
+}}
 
 var buttonSendRequest = document.getElementById('button-send-request')
 

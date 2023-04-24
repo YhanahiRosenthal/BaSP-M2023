@@ -87,7 +87,7 @@ function validateForm(){
 
 
     nameInput.onblur = function(){
-        if (!nameInput.value.match(/^[A-Za-z\s]/) || nameInput.value.length < 3) {
+        if (!isNaN(nameInput.value) || nameInput.value.length < 3) {
 
             nameInput.style.border = 'solid red 1px'
             errorName.appendChild(p)
@@ -108,7 +108,7 @@ function validateForm(){
 }
 
     surname.onblur = function(){
-        if (!surname.value.match(/^[A-Za-z\s]/) || surname.value.length < 3) {
+        if (!isNaN(surname.value)  || surname.value.length < 3) {
 
             surname.style.border = 'solid red 1px'
             errorSurname.appendChild(s)
@@ -148,24 +148,50 @@ function validateForm(){
     }
 }
 
-    password.onblur = function(){
-        if (!password.value.match(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]/ || password.value.length > 7)) {
-                    password.style.border = 'solid red 1px'
-                    errorPassword.appendChild(g)
-                    isValidPassword = false
-        }else{
-            password.style.border = 'none'
-            isValidPassword = true
-            if(g){
-                errorPassword.removeChild(g)
+password.onblur = function(){
+
+    var passwordValue = password.value
+
+    function validatePassword(passwordValue){
+
+        var letters = false
+        var numbers = false
+
+        if (passwordValue.length < 8) {
+            return false
+        }
+        for (var i = 0; i < passwordValue.length; i++){
+
+            var character = passwordValue.charAt(i)
+
+            if (character >= '0' && character <= '9'){
+                numbers = true
+
+            } else if ((character >= 'a' && character <= 'z') || (character >= 'A' && character <= 'Z')) {
+                letters = true
             }
         }
-
-        password.onfocus = function(){
-            if(g){
-              errorPassword.removeChild(g)
-            }
+        return letters && numbers
     }
+
+    if (!validatePassword(passwordValue)) {
+        password.style.border = 'solid red 1px'
+        errorPassword.appendChild(g)
+        isValidPassword = false
+    }else{
+        password.style.border = 'none'
+        isValidPassword = true
+        if(g){
+            errorPassword.removeChild(g)
+        }
+    }
+
+    password.onfocus = function(){
+        if(g){
+          errorPassword.removeChild(g)
+        }
+    }
+}
 }
 
     confirmPassword.onblur = function(){
@@ -249,7 +275,46 @@ function validateForm(){
 }
 
     address.onblur = function(){
-        if (!address.value.match(/^[a-zA-ZÁÉÍÓÚáéíóú\s]+\s\d{4,}$/)){
+
+        var addressValue = address.value
+
+        function validateAddress(addressValue) {
+
+            var words = addressValue.split(" ")
+            console.log(words.length < 2)
+
+            if(addressValue == ''){
+                return true
+            }
+
+            if(words.length < 2){
+                return true
+            }
+
+            var lastWord = words[words.length - 1]
+
+            if(isNaN(lastWord)){
+                return true
+            }
+
+            if(lastWord == ''){
+                return true
+            }
+
+            for(var i = 0; i < words.length - 1; i++){
+                if (!isNaN(words[i])) {
+                    return true
+                }
+            }
+
+            if(lastWord.length <= 0 || lastWord.length > 3){
+                return false
+            }
+
+           return true
+        }
+
+        if(validateAddress(addressValue)){
                 address.style.border = 'solid red 1px'
                 errorAddress.appendChild(k)
                 isValidAddress = false
@@ -269,7 +334,7 @@ function validateForm(){
 }
 
     locations.onblur = function(){
-        if (!locations.value.match(/^[A-Za-z0-9]/) || locations.value.length <= 2){
+        if (locations.value.length <= 2){
                 locations.style.border = 'solid red 1px'
                 errorLocation.appendChild(z)
                 isValidLocation = false
@@ -289,7 +354,7 @@ function validateForm(){
 }
 
     postalCode.onblur = function(){
-        if (!postalCode.value.match(/^\d{4,5}$/)){
+        if (isNaN(postalCode.value) || postalCode.value.length < 4 || postalCode.value.length > 5){
                 postalCode.style.border = 'solid red 1px'
                 errorPostal.appendChild(b)
                 isValidPostal = false
@@ -307,7 +372,7 @@ function validateForm(){
             }
     }
 
-}}
+}
 
 validateForm()
 
