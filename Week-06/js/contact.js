@@ -28,7 +28,7 @@ var g = document.createElement('p')
 var isValidName, isValidSurname, isValidEmail, isValidMessage
 
 nameInput.onblur = function(){
-    if (!nameInput.value.match(/^[A-Za-z\s]/) || nameInput.value.length < 3) {
+    if (!isNaN(surname.value)|| nameInput.value.length < 3) {
 
         nameInput.style.border = 'solid red 1px'
         errorName.appendChild(p)
@@ -49,7 +49,7 @@ nameInput.onblur = function(){
 }
 
 surname.onblur = function(){
-    if (!surname.value.match(/^[A-Za-z\s]/) || surname.value.length < 3) {
+    if (!isNaN(surname.value) || surname.value.length < 3) {
 
         surname.style.border = 'solid red 1px'
         errorSurname.appendChild(s)
@@ -90,7 +90,7 @@ email.onblur = function(){
 }
 
 messages.onblur = function(){
-    if (!messages.value.match(/^[A-Za-z\s]/) || messages.value.length < 20) {
+    if (!isNaN(messages.value) || messages.value.length < 20) {
 
         messages.style.border = 'solid red 1px'
         errorMessage.appendChild(g)
