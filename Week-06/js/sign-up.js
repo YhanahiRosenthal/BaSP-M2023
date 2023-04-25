@@ -171,6 +171,7 @@ password.onblur = function(){
                 letters = true
             }
         }
+
         return letters && numbers
     }
 

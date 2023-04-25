@@ -36,7 +36,7 @@ Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-05/index.html
 
 This week i am been working on form with Javascript, doing the week challenge where i had to make validations, add error messages, use regex and "if-else", made the new sections of "Log in" and "Sign up" with your styles, starting it mobile first, that mean your screen is responsive too and i made the validation form of "Contact us".
 
-Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-06/index.html
+Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-06/views/index.html
 
 ### Screen resolution: 1920px (Desktop)
 
