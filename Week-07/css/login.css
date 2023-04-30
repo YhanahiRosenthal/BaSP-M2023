@@ -1,0 +1,181 @@
+.container-navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #404040;
+    width: 100%;
+    padding-top: 4rem;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.container-buttons-responsive {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 16rem;
+    margin-bottom: 3rem;
+}
+
+.container-buttons-responsive a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.container-navbar .container-navbar-sticky {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+}
+
+.menu-list {
+    padding: 0;
+}
+
+.menu-list li {
+    list-style: none;
+    margin: 40px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container-info ul li {
+    margin: 25px 0 25px 0;
+    list-style: none;
+}
+
+.container-info img {
+    display: none;
+}
+
+.container-info p {
+    display: none;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+    margin: 0 auto 10rem auto;
+}
+
+.container-login h2 {
+    color: #ffffff;
+}
+
+.container-button-route {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+.container-button-route a {
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: solid #ffffff;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.container-button-route a:hover {
+    background-color: #e2e2e236;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: #D5DD3C;
+    border-radius: 2rem;
+    width: 80%;
+    padding: 4rem 0 4rem 0;
+}
+
+.form-container-label-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.container-label-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.container-label-input select, input {
+    width: 13rem;
+    height: 1.5rem;
+    background-color: #fbfbfb;
+    border-color: #00000000;
+    border-radius: 0.3rem;
+}
+
+.container-label-input select {
+    height: 1.8rem;
+}
+
+.register-button {
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+}
+
+.container-buttons-responsive {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 16rem;
+    margin-bottom: 3rem;
+}
+
+.container-buttons-responsive a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.container-error-messagge {
+    height: 1.3rem;
+    width: 14rem;
+    padding: 0;
+    margin: 0;
+}
+
+.container-error-messagge .error-message {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: red;
+    height: 1.5rem;
+}
+
+.you-dont-have-user{
+    font-size: 0.8rem;
+    color: black;
+}
+
+@media screen and (min-width: 1025px) {
+    .container-navbar {
+        display: none;
+    }
+}

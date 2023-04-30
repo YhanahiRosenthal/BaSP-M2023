@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../../assets/images/logo.png" >
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA ROCKET GYM</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo" >
+            <img src="../../assets/images/logo.png" alt="Logo Mega Rocket GYM" class="img-logo" >
+            <p class="title-logo" >MEGA ROCKET S.A</p>
+        </div>
+        <div class="container-button" >
+            <a href="./sign-up.html" class="name-button">
+                Sign up
+                <img src="../../assets/images/signUp.png" alt="Sign up icon" class="img-button" >
+            </a>
+            <a href="./login.html" class="name-button">
+                Log in
+                <img src="../../assets/images/user1.png" alt="Login icon" class="img-button" >
+            </a>
+        </div>
+        <img src="../../assets/images/Icon-burger.png" alt="icon burger menu" class="icon-burger" >
+    </header>
+    <main class="container-main">
+        <aside class="container-navbar" >
+            <div class="container-navbar-sticky">
+                <nav>
+                    <div class="container-buttons-responsive">
+                        <a href="./sign-up.html">Sign up</a>
+                        <a href="./login.html">Log in</a>
+                    </div>
+                    <ul class="menu-list">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#Features">FEATURES</a></li>
+                        <li><a href="#ContactUs">CONTACT US</a></li>
+                        <li><a href="#Activities">ACTIVITIES</a></li>
+                        <li><a href="#Memberships">MEMBERSHIP</a></li>
+                        <li><a href="#OurStory">OUR STORY</a></li>
+                    </ul>
+                </nav>
+                <div class="container-info">
+                    <div>
+                        <img src="../../assets/images/mapa.png" alt="icon map">
+                        <p>Av. Pellegrini 3535</p>
+                    </div>
+                    <div>
+                        <img src="../../assets/images/ring-phone.png" alt="icon phone">
+                        <p>+464 206 96</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+        <div class="container-all-sections">
+            <section id="Home" class="index-home" >
+                <div class="container-title-home">
+                    <h1 class="title-home">
+                        DON'T SIT <span class="getfit-home">GET FIT</span>
+                    </h1>
+                </div>
+                <div class="container-text-home" >
+                    <p>Your best version is waiting for you, join Mega Rocket Gym today.</p>
+                    <p>In this app you can choose our best personal trainers and the best classes</p>
+                    <p>and have a bunch of privileges with our differents memberships.</p>
+                </div>
+            </section>
+            <section id="Features" >
+                <div class="container-title-section-page">
+                    <h3 class="title-section-page">
+                        FEATU <span class="second-part-title">RES</span> 
+                    </h3>
+                </div>
+                <article class="container-cards">
+                    <div class="cards-features reservation">
+                        <h5>RESERVATIONS</h5>
+                        <p>Choose your favorite class and ensure your place</p>
+                    </div>
+                    <div class="cards-features memberships">
+                        <h5>MEMBERSHIPS</h5>
+                        <p>Pick which one is best for you</p>
+                    </div>
+                    <div class="cards-features schedule">
+                        <h5>SCHEDULE</h5>
+                        <p>Monday to saturday 08 am till 08 pm</p>
+                    </div>
+                    <div class="cards-features contact">
+                        <h5>CONTACT AND SUGGESTIONS</h5>
+                        <p>Your opinion is important to us, it helps us improve</p>
+                    </div>
+                </article>
+            </section>
+            <section id="ContactUs">
+                <div class="container-title-section-page">
+                    <h3 class="title-section-page ">
+                        CONTACT <span class="second-part-title">US</span>
+                    </h3>
+                </div>
+                <form action="#" class="container-form">
+                    <div class="container-inputs">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" placeholder="Name" name="name" id="name">
+                            <div class="container-message-error" id="error-name"></div>
+                        </div>
+                        <div>
+                            <label for="surname">Surname</label>
+                            <input type="text" placeholder="Surname" name="surname" id="surname">
+                            <div class="container-message-error" id="error-surname"></div>
+                        </div>
+                        <div>
+                            <label for="email">E-Mail</label>
+                            <input type="email" placeholder="E-Mail" name="email" id="emails">
+                            <div class="container-message-error" id="error-email"></div>
+                        </div>
+                        <div>
+                            <label for="reason">Contact reason</label>
+                            <select name="reason" id="reason">
+                                <option value="Memberships and costs">I want to know the memberships and costs</option>
+                                <option value="Questions or suggestion">I want to make a question or suggestion</option>
+                                <option value="Claim">I want to make a claim</option>
+                            </select>
+                            <div class="container-message-error"></div>
+                        </div>
+                    </div>
+                    <div class="input-message">
+                        <p>Message</p>
+                        <textarea placeholder="Write here..." id="message"></textarea>
+                        <div class="container-message-error" id="error-message"></div>
+                    </div>
+                    <button class="button-send-form" id="button-send-message-contact">Send</button>
+                </form>
+            </section>
+            <section id="Activities">
+                <div class="container-title-section-page">
+                    <h3 class="title-section-page">
+                        ACTIVI <span class="second-part-title">TIES</span>
+                    </h3>
+                </div>
+                <article class="container-cards-activities" >
+                    <div class="container-crossfit-box">
+                        <div class="cards-activities crossfit" >
+                            <h5>CROSSFIT</h5>
+                        </div>
+                        <div class="cards-activities box" >
+                            <h5>BOX</h5>
+                        </div>
+                    </div>
+                    <div class="container-functional-spinning-fitness">
+                        <div class="cards-activities functional" >
+                            <h5>FUNCTIONAL</h5>
+                        </div>
+                        <div class="cards-activities spinning" >
+                            <h5>SPINNING</h5>
+                        </div>
+                        <div class="cards-activities fitness" >
+                            <h5>FITNESS</h5>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="Memberships">
+                <div class="container-title-section-page">
+                    <h3 class="title-section-page">
+                        MEMBER <span class="second-part-title">SHIPS</span>
+                    </h3>
+                </div>
+                <ul>
+                    <li class="only-classes-membership">
+                        <h5>ONLY CLASSES MEMBERSHIP</h5>
+                        <p class="first-phrase-membership sentence">Free access to classes with registration</p>
+                        <p class="membership-schedule-view sentence" >Schedule View</p>
+                    </li>
+                    <li class="classic-membership">
+                        <h5>CLASSIC MEMBERSHIP</h5>
+                        <p class="first-phrase-membership sentence">Free access to the gym</p>
+                        <p class="second-phrase-membership sentence">PersonaliZed Monitoring & Coaching</p>
+                        <p class="membership-schedule-view sentence" >Schedule View</p>
+                    </li>
+                    <li class="black-membership">
+                        <h5>BLACK MEMBERSHIP</h5>
+                        <p class="first-phrase-membership sentence">Free access to the gym</p>
+                        <p class="second-phrase-membership sentence">Free access to classes with registration</p>
+                        <p class="third-phrase-membership sentence">Personalized Monitoring & Coaching</p>
+                        <p class="membership-schedule-view sentence" >Schedule View</p>
+                    </li>
+                </ul>
+            </section>
+            <section id="OurStory">
+                <div class="container-title-our-story">
+                    <h3 class="title-section-page our-story">
+                        OUR <span id="our-story" class="second-part-title">STORY</span>
+                    </h3>
+                </div>
+                <div class="container-text-our-story">
+                    <p class="our-story-sentence">
+                        We are one of the oldest but most modern gyms. 
+                        50 trainers work in MR GYM and more than 200 people 
+                        come to our place everyday.
+                    </p>
+                    <p class="our-story-sentence"> 
+                        We are dedicated to helping you improve your quality of life in 
+                        a fun and active way
+                    </p>
+                </div>
+            </section>
+        </div>
+   </main>
+    <footer class="container-footer">
+        <div class="container-social">
+            <a href="https://www.instagram.com" class="social-links" target="_blank">
+                <img src="../../assets/images/instagram.png" alt="logo Instagram" >
+                @ROCKETGYM
+            </a>
+            <a href="https://web.whatsapp.com" class="social-links" target="_blank">
+                <img src="../../assets/images/wpp.png" alt="logo Whatsapp" >
+                +1 408 741 2369
+            </a>
+            <a href="https://es-la.facebook.com" class="social-links" target="_blank">
+                <img src="../../assets/images/facebook.png" alt="logo Facebook" >
+                Mega rocket GYM
+            </a>
+        </div>
+        <div class="container-info-footer">
+            <div>
+                <img src="../../assets/images/mapa.png" alt="icon map">
+                <p>Av. Pellegrini 3535</p>
+            </div>
+            <div>
+                <img src="../../assets/images/ring-phone.png" alt="icon phone">
+                <p>+464 206 96</p>
+            </div>
+        </div>
+        <div class="footer-reserved">
+            <p>MEGA ROCKET SA</p>
+            <p>All rights reserved. 2023©</p>
+        </div>
+    </footer>
+    <script src="../js/contact.js"></script>
+</body>
+</html>
