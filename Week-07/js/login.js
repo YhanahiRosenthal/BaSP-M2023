@@ -46,7 +46,6 @@ email.onblur = function(){
 }
 
 password.onblur = function(){
-  password.onblur = function(){
 
     var passwordValue = password.value
 
@@ -75,8 +74,8 @@ password.onblur = function(){
     if (!validatePassword(passwordValue)) {
 
         var g = document.createElement('p')
-          g.classList = 'error-message'
-          g.textContent = "Password incorrect. This field must have at least 8 characters with letters, numbers and simbols"
+            g.classList = 'error-message'
+            g.textContent = "Password incorrect. This field must have at least 8 characters with letters, numbers and simbols"
         password.style.border = 'solid red 1px'
         errorPassword.appendChild(g)
         isValidPassword = false
@@ -93,7 +92,7 @@ password.onblur = function(){
           errorPassword.removeChild(g)
         }
     }
-}}
+}
 
 var buttonSendRequest = document.getElementById('button-send-request')
 
@@ -115,5 +114,8 @@ buttonSendRequest.addEventListener('click', function(e){
                     alert(data.msg)
                   }
               })
+              .catch((error) => console.log(error))
       }
   })
+
+  'qwertyuio123456789'

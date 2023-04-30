@@ -38,8 +38,23 @@ var errorPostal = document.getElementById('error-postal')
 var isValidName, isValidSurname, isValidEmail, isValidPassword, isValidConfirm;
 var isValidDNI, isValidDate, isValidPhone, isValidAddress, isValidLocation, isValidPostal;
 
+function localTrue(){
+
+    let arrayInput = [date, address, locations, email, dni, postalCode, nameInput, password,
+                        surname, confirmPassword, phone]
+
+    window.addEventListener('load', () =>{
+        if(localStorage.length > 0){
+            for(let i = 0; i < arrayInput.length; i++){
+                arrayInput[i].value = JSON.parse(localStorage.getItem(localStorage.key(i)))
+            }
+        }}
+    )}
+
+
 function validateForm(){
 
+    localTrue()
 
     nameInput.onblur = function(){
         if (!isNaN(nameInput.value) || nameInput.value.length < 3) {
@@ -56,6 +71,7 @@ function validateForm(){
             if(p){
                 errorName.removeChild(p)
             }
+            localStorage.setItem('name', JSON.stringify(nameInput.value))
         }
 
         nameInput.onfocus = function(){
@@ -80,6 +96,7 @@ function validateForm(){
             if(s){
                 errorSurname.removeChild(s)
             }
+            localStorage.setItem('surname', JSON.stringify(surname.value))
         }
 
         surname.onfocus = function(){
@@ -104,6 +121,7 @@ function validateForm(){
             if(t){
                 errorEmail.removeChild(t)
             }
+            localStorage.setItem('email', JSON.stringify(email.value))
         }
 
         email.onfocus = function(){
@@ -154,6 +172,7 @@ password.onblur = function(){
         if(g){
             errorPassword.removeChild(g)
         }
+        localStorage.setItem('password', JSON.stringify(password.value))
     }
 
     password.onfocus = function(){
@@ -179,6 +198,7 @@ password.onblur = function(){
                 if(n){
                     errorConfirmPassword.removeChild(n)
                 }
+            localStorage.setItem('confirmPassword', JSON.stringify(confirmPassword.value))
         }
 
         confirmPassword.onfocus = function(){
@@ -203,6 +223,7 @@ password.onblur = function(){
             if(d){
                 errorDni.removeChild(d)
             }
+            localStorage.setItem('dni', JSON.stringify(dni.value))
         }
 
         dni.onfocus = function(){
@@ -227,6 +248,8 @@ password.onblur = function(){
                 if(m){
                     errorDate.removeChild(m)
                 }
+
+            localStorage.setItem('date', JSON.stringify(date.value))
         }
 
         date.onfocus = function(){
@@ -251,6 +274,7 @@ password.onblur = function(){
                 if(q){
                     errorPhone.removeChild(q)
                 }
+            localStorage.setItem('phone', JSON.stringify(phone.value))
         }
 
         phone.onfocus = function(){
@@ -267,7 +291,6 @@ password.onblur = function(){
         function validateAddress(addressValue) {
 
             var words = addressValue.split(" ")
-            console.log(words.length < 2)
 
             if(addressValue == ''){
                 return true
@@ -314,6 +337,7 @@ password.onblur = function(){
                 if(k){
                     errorAddress.removeChild(k)
                 }
+            localStorage.setItem('address', JSON.stringify(address.value))
         }
 
         address.onfocus = function(){
@@ -338,6 +362,7 @@ password.onblur = function(){
                 if(z){
                     errorLocation.removeChild(z)
                 }
+            localStorage.setItem('location', JSON.stringify(locations.value))
         }
 
         locations.onfocus = function(){
@@ -362,6 +387,7 @@ password.onblur = function(){
                 if(b){
                     errorPostal.removeChild(b)
                 }
+            localStorage.setItem('Postal code', JSON.stringify(postalCode.value))
         }
 
         postalCode.onfocus = function(){
@@ -373,6 +399,8 @@ password.onblur = function(){
 }
 
 validateForm()
+
+
 
 var buttonSendForm = document.getElementById('button-send-form')
 
@@ -400,22 +428,30 @@ buttonSendForm.addEventListener('click', function(e){
         alert("The field 'Location' has an error or is not complete")
     }else if(!isValidPostal){
         alert("The field 'Postal code' has an error or is not complete")
-    }else if(isValidName, isValidSurname, isValidEmail, isValidPassword, isValidConfirm,
-        isValidDNI, isValidDate, isValidPhone, isValidAddress, isValidLocation, isValidPostal){
-            alert('Successfully sent')
-            alert("YOUR DATA: " + "Name: " + nameInput.value + ", " +
-            "Surname: " + surname.value + ", " +
-            "Email: " + email.value + ", " +
-            "Password: " + password.value + ", " +
-            "DNI: " + dni.value + ", " +
-            "Date: " + date.value + ", " +
-            "Phone: " + phone.value + ", " +
-            "Address: " + address.value + ", " +
-            "Location: " + locations.value + ", " +
-            "Postal code: " + postalCode.value)
     }else{
-        alert('Hay campos sin completar')
-    }
-})
 
+        var newDate = new Date(date.value);
+        var day = newDate.getDate() + 1;
+        var month = newDate.getMonth() + 1;
+        var year = newDate.getFullYear();
+        let dateParam =  '0' + month + '/' + day + '/' + year;
+
+
+        var url = `https://api-rest-server.vercel.app/signup?name=${nameInput.value}&lastName=${surname.value}&dni=${dni.value}&dob=${dateParam}&phone=${phone.value}&address=${address.value}&city=${locations.value}&zip=${postalCode.value}&email=${email.value}&password=${password.value}`
+
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            if(data.status === "success"){
+            alert(data)
+            localStorage.setItem('user', data)
+            }else{
+            alert(data.msg)
+            }
+        })
+        .catch((error) => console.log(error))
+            }
+
+            console.log(url)
+})
 
