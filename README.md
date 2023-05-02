@@ -38,6 +38,12 @@ This week i am been working on form with Javascript, doing the week challenge wh
 
 Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-06/views/index.html
 
+## Week 07
+
+This week i am been working on the Login and sign up forms connecting them to the API REST, i have also made use of LocalStorage, sending and receiving data when refreshing the page and i have made success and error modals.
+
+Link deploy: https://yhanahirosenthal.github.io/BaSP-M2023/Week-07/views/index.html
+
 ### Screen resolution: 1920px (Desktop)
 
 ## Languages
