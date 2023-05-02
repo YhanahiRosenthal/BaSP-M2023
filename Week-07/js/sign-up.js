@@ -58,12 +58,26 @@ let arrayInput = [
   phone,
 ];
 
+let arrayKeys = [
+  "date",
+  "address",
+  "location",
+  "email",
+  "dni",
+  "Postal code",
+  "name",
+  "password",
+  "surname",
+  "confirmPassword",
+  "phone",
+];
+
 function localTrue() {
   window.addEventListener("load", () => {
     if (localStorage.length > 0) {
       for (let i = 0; i < arrayInput.length; i++) {
         arrayInput[i].focus();
-        arrayInput[i].value = JSON.parse(localStorage.getItem(localStorage.key(i)));
+        arrayInput[i].value = JSON.parse(localStorage.getItem(arrayKeys[i]));
       }
     }
   });
@@ -208,7 +222,6 @@ confirmPassword.onblur = function () {
     if (n) {
       errorConfirmPassword.removeChild(n);
     }
-
   }
 
   confirmPassword.onfocus = function () {
@@ -255,7 +268,6 @@ date.onblur = function () {
     if (m) {
       errorDate.removeChild(m);
     }
-
   }
 
   date.onfocus = function () {
@@ -415,38 +427,87 @@ buttonSendForm.addEventListener("click", function (e) {
   var year = newDate.getFullYear();
   let dateParam = month + "/" + day + "/" + year;
 
-  let url = "https://api-rest-server.vercel.app/signup" +
-          "?name=" + nameInput.value +
-          "&lastName=" + surname.value +
-          "&dni=" + dni.value +
-          "&dob=" + dateParam +
-          "&phone=" + phone.value +
-          "&address=" + address.value +
-          "&city=" + locations.value +
-          "&zip=" + postalCode.value +
-          "&email=" + email.value +
-          "&password=" + password.value;
+  let url =
+    "https://api-rest-server.vercel.app/signup" +
+    "?name=" +
+    nameInput.value +
+    "&lastName=" +
+    surname.value +
+    "&dni=" +
+    dni.value +
+    "&dob=" +
+    dateParam +
+    "&phone=" +
+    phone.value +
+    "&address=" +
+    address.value +
+    "&city=" +
+    locations.value +
+    "&zip=" +
+    postalCode.value +
+    "&email=" +
+    email.value +
+    "&password=" +
+    password.value;
+
+  let containerModal = document.getElementById("container-modal");
+  let close = document.getElementById("close");
+
+  close.addEventListener("click", () => {
+    containerModal.style.display = "none";
+  });
+
+  let imgModal = document.getElementById("image-modal");
+  let text = document.getElementById("content-text");
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
       if (data.success) {
-        alert(data.msg + "\n" +
-        "name: " + nameInput.value + "\n" +
-        "lastName :" + surname.value + "\n" +
-        "dni: " + dni.value + "\n" +
-        "dob: " + dateParam + "\n" +
-        "phone: " + phone.value + "\n" +
-        "address: " + address.value + "\n" +
-        "city: " + locations.value + "\n" +
-        "zip: " + postalCode.value + "\n" +
-        "email: " + email.value + "\n" +
-        "password: " + password.value);
+        containerModal.style.display = "flex";
+        imgModal.setAttribute("src", "../../assets/images/success.png");
+        text.innerHTML =
+          "<p>¡" +
+          data.msg +
+          "!</p>" +
+          "<p>name: " +
+          nameInput.value +
+          "</p>" +
+          "<p>lastName: " +
+          surname.value +
+          "</p>" +
+          "<p>dni: " +
+          dni.value +
+          "</p>" +
+          "<p>dob: " +
+          dateParam +
+          "</p>" +
+          "<p>phone: " +
+          phone.value +
+          "</p>" +
+          "<p>address: " +
+          address.value +
+          "</p>" +
+          "<p>city: " +
+          locations.value +
+          "</p>" +
+          "<p>zip: " +
+          postalCode.value +
+          "</p>" +
+          "<p>email: " +
+          email.value +
+          "</p>" +
+          "<p>password: " +
+          password.value +
+          "</p>";
         localStorage.setItem("name", JSON.stringify(nameInput.value));
         localStorage.setItem("surname", JSON.stringify(surname.value));
         localStorage.setItem("email", JSON.stringify(email.value));
         localStorage.setItem("password", JSON.stringify(password.value));
-        localStorage.setItem("confirmPassword",JSON.stringify(confirmPassword.value));
+        localStorage.setItem(
+          "confirmPassword",
+          JSON.stringify(confirmPassword.value)
+        );
         localStorage.setItem("dni", JSON.stringify(dni.value));
         localStorage.setItem("date", JSON.stringify(date.value));
         localStorage.setItem("phone", JSON.stringify(phone.value));
@@ -454,6 +515,7 @@ buttonSendForm.addEventListener("click", function (e) {
         localStorage.setItem("location", JSON.stringify(locations.value));
         localStorage.setItem("Postal code", JSON.stringify(postalCode.value));
       } else {
+        containerModal.style.display = "flex";
         let error = "";
         data.errors.forEach((e) => {
           error += e.msg + "\n";
@@ -462,6 +524,9 @@ buttonSendForm.addEventListener("click", function (e) {
       }
     })
     .catch((error) => {
-      alert(error);
+      imgModal.setAttribute("src", "../../assets/images/error.png");
+      text.innerHTML = "<label>" +
+      error +
+      "</label>";
     });
 });

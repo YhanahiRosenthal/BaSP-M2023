@@ -95,26 +95,49 @@ var buttonSendRequest = document.getElementById("button-send-request");
 
 buttonSendRequest.addEventListener("click", function (e) {
   e.preventDefault();
-  if (!isValidEmail) {
-    alert(
-      "Email incorrect. This field must have an allowed format. Ex: user@user.com"
-    );
-  } else if (!isValidPassword) {
-    alert(
-      "Password incorrect. This field must have at least 8 characters with letters, numbers and simbols"
-    );
-  } else {
     var url = `https://api-rest-server.vercel.app/login?email=${email.value}&password=${password.value}`;
+
+    let containerModal = document.getElementById("container-modal");
+    let close = document.getElementById("close");
+
+    close.addEventListener("click", () => {
+      containerModal.style.display = "none";
+    });
+
+    let imgModal = document.getElementById("image-modal");
+    let text = document.getElementById("content-text");
 
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        if (data.status === "success") {
-          alert(data);
-        } else {
-          alert(data.msg);
+        if (data.success) {
+          containerModal.style.display = "flex";
+          imgModal.setAttribute("src", "../../assets/images/success.png");
+          text.innerHTML = "<p>¡" + data.msg + "!</p>";
+
+        } else if(data.errors){
+
+          let error = "";
+
+          data.errors.forEach((e) => {
+            error += e.msg + "\n";
+
+          });
+          throw new Error(error);
+
+        }else if(data.msg){
+
+          let errorMessage = "";
+
+          errorMessage += data.msg
+
+          throw new Error(errorMessage)
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error, errorMessage) => {
+        containerModal.style.display = "flex";
+        imgModal.setAttribute("src", "../../assets/images/error.png");
+        text.innerHTML = "<label>" + error, errorMessage + "</label>";
+      });
   }
-});
+);

@@ -174,8 +174,91 @@
     color: black;
 }
 
+.container-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000070;
+}
+
+ .container-modal .background-modal {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 30rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    }
+
+.container-modal .background-modal .close {
+    float: right;
+    position: relative;
+    bottom: 0.5rem;
+    left: 7.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.container-modal .background-modal img {
+    display: flex;
+    align-self: center;
+    width: 6rem;
+}
+
+.container-modal .background-modal div{
+    text-align: center;
+}
+
+.container-modal .background-modal p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffea00;
+}
+
+.container-modal .background-modal label {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e40000;
+    padding-top: 1rem;
+}
+
+.container-modal .background-modal p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
 @media screen and (min-width: 1025px) {
     .container-navbar {
         display: none;
+    }
+
+    .container-modal .background-modal {
+        width: 90%;
+    }
+
+    .container-modal .background-modal .close {
+        left: 14.5rem;
+    }
+
+    .container-modal .background-modal img {
+        width: auto;
+    }
+
+    .container-modal .background-modal div{
+        text-align: center;
+    }
+    .container-modal .background-modal p:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .container-modal .background-modal p {
+        font-size: 1rem;
     }
 }
